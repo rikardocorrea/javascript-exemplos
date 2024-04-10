@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        $nome = prompt("Digite seu nome: ")
+        $idade = prompt("Digite sua idade: ")
+        $sexo = prompt("Digite sexo [M] para Masculino ou [F] para feminino")
+        $caminho_foto = "";
+
+        if(($sexo == "m") || ($sexo == "M"))
+        {
+            if($idade < 18)
+            {
+                alert("menino")   
+                $caminho_foto = "<img src='imagens/menino.PNG' width='200'>"             
+            }
+            else
+            {
+                alert("Homem")
+                $caminho_foto = "<img src='imagens/homem.PNG' width='200'>" 
+            }
+        }
+        else
+        {
+            if($idade < 18)
+            {
+                alert("menina")  
+                $caminho_foto = "<img src='imagens/menina.PNG' width='200'>"               
+            }
+            else
+            {
+                alert("Mulher")
+                $caminho_foto = "<img src='imagens/mulher.PNG' width='200'>" 
+            }
+        }
+
+        document.write("<table border='2' width='600'>")
+        document.write("        <tr>")
+        document.write("            <td><b> Nome </b></td>")
+        document.write("            <td><b> Idade </b></td>")
+        document.write("            <td><b> Sexo </b></td>")
+        document.write("            <td><b> Foto </b></td>")
+        document.write("        </tr>")
+        document.write("        <tr>")
+        document.write("            <td><b>" + $nome + "</b></td>")
+        document.write("            <td><b> " + $idade + " </b></td>")
+        document.write("            <td><b> "+ $sexo + " </b></td>")
+        document.write("        <td>" + $caminho_foto + "</td>")
+        document.write("        </tr>")
+        document.write("</table>")
+
+    </script>
+</head>
+<body>
+
+    <!-- <img src="imagens/homem.PNG"> -->
+    <!--
+    <table border="2" width="600">
+        <tr>
+            <td><b> Nome xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx </b></td>
+            <td><b> Idade </b></td>
+            <td><b> Sexo </b></td>
+            <td><b> Foto </b></td>
+        </tr>
+        <tr>
+            <td><b> Ricardo </b></td>
+            <td><b> 43 </b></td>
+            <td><b> M </b></td>
+            <td> <img src="imagens/homem.PNG" width="200"> </td>
+        </tr>
+    </table>-->
+    
+</body>
+</html>
