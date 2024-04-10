@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        $nome = prompt("Qual seu nome ?")
+        document.write("O nome digitado foi:" + $nome)
+
+        $sexo = prompt("Qual é o sexo? [M] ou [F]")
+        document.writeln("Sexo = " + $sexo)
+
+        if(($sexo == "M") || ($sexo == "m"))
+        {
+            document.writeln("Masculino")
+
+        }
+        else
+        {
+            documento.writeln("Feminino")
+        }
+
+        $idade = prompt("Digite sua idade: ")
+        if($idade < 18)
+        {
+            document.write("Menor de idade")
+        }
+        else
+        {
+            document.write("Maior de idade")
+        }
+  
+
+        document.write("<center>")
+        document.write("<font color='red' size='6'>SENAI / SUMARÉ </font> ")
+        document.write("<br><img src='imagens/homens/homem03.png' width='350'>")
+        document.write("<br>")
+        
+    </script>
+
+</head>
+
+<body>
+    <center>
+        
+        <font color="darkblue" size="7">
+            Informações dos funcionários da empresa x.
+        </font>
+        <br>
+        <br>
+        <table border="1" width="800">
+            <tr bgcolor="gray">
+                <td width="400" align="center"><b>NOMES</b></td>
+                <td align="center"><b>IDADE</b></td>
+                <td align="center"><b>FOTO</b></td>
+            </tr>
+            <tr>
+                <td>Marcos Eduardo</td>
+                <td>75 anos</td>
+                <td align="center"><img src="imagens/homens/homem02.jpg" width="100px"></td>
+            </tr>
+            <tr>
+                <td>Maria Rita</td>
+                <td>32 anos</td>
+                <td align="center">
+                    <a href="https://github.com/rikardocorrea">
+                        <img src="imagens/mulheres/mulher1.jfif" width="100px">
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>Luiz Felipe</td>
+                <td>60 anos</td>
+                <td align="center"><img src="imagens/homens/homem03.PNG" width="200px"></td>
+            </tr>
+            <tr>
+                <td>Júlia Aparecida</td>
+                <td>25 anos</td>
+                <td align="center"><img src="imagens/mulheres/mulher2.jpg" width="200px"></td>
+            </tr>
+            <tr>
+                <td>Letícia Oliveira</td>
+                <td>17 anos</td>
+                <td align="center"><img src="imagens/mulheres/mulher3.jpg" width="200px"></td>
+            </tr>
+            <tr>
+                <td>Alan Ferreira</td>
+                <td>35 anos</td>
+                <td align="center"><img src="imagens/homens/homem01.jpg" width="100px"></td>
+            </tr>
+
+        </table>
+    </center>
+</body>
+
+</html>
