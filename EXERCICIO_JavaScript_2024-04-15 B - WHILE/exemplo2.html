@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        alert("Faixa de valores: Informe o maior número e o menor número...")
+
+        $maiorNumero = prompt("Qual é o maior número ? ")
+        $maiorNumero = parseInt($maiorNumero)
+
+        $menorNumero = prompt("Qual é o menor número ? ")
+        $menorNumero = parseInt($menorNumero)
+
+        $numeroAtual = $maiorNumero
+       
+        while ($numeroAtual >= $menorNumero) 
+        {
+            document.write("<br> Número atual = " + $numeroAtual)
+            $numeroAtual = $numeroAtual -1
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
