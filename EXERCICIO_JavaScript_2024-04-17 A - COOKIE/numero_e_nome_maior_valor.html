@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        // Obtém o valor atual armazenado no cookie
+        var maiorValorArmazenado = document.cookie.split(';').find(cookie => cookie.trim().startsWith("maiorValor="));
+        var maiorNomeArmazenado = document.cookie.split(';').find(cookie => cookie.trim().startsWith("maiorNome="));
+        alert(maiorValorArmazenado)
+        alert(maiorNomeArmazenado)
+        // Se o cookie existir, obtém o valor dele
+        if (maiorValorArmazenado) 
+        {
+            maiorValorArmazenado = parseFloat(maiorValorArmazenado.split('=')[1]);
+        } 
+        else 
+        {
+            maiorValorArmazenado = null;
+        }
+
+        if (maiorNomeArmazenado) 
+        {
+            maiorNomeArmazenado = maiorNomeArmazenado.split('=')[1];
+        } 
+        else 
+        {
+            maiorNomeArmazenado = null;
+        }
+
+        // Solicita que o usuário insira um número
+        var valorDigitado = parseFloat(prompt("Digite um número:"));
+        var nomeDigitado = prompt("Digite o nome de quem digitou o número: ");
+
+        // Verifica se o valor digitado é maior do que o valor armazenado no cookie
+        if (maiorValorArmazenado === null || valorDigitado > maiorValorArmazenado) 
+        {
+            // Armazena o novo maior valor no cookie
+            document.cookie = "maiorValor=" + valorDigitado + "; expires=Thu, 18 Dec 2025 12:00:00 UTC; path=/";
+            document.cookie = "maiorNome=" + nomeDigitado + "; expires=Thu, 18 Dec 2025 12:00:00 UTC; path=/";
+            document.write("Novo maior valor armazenado: " + valorDigitado + " e foi digitado por " + nomeDigitado);
+        } 
+        else 
+        {
+            document.write("O maior valor armazenado ainda é: " + maiorValorArmazenado + " e foi digitado por " + maiorNomeArmazenado);
+        }
+
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
