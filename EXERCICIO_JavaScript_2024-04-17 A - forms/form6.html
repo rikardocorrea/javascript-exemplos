@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function senai()
+        {
+            $nome = this.form1.fNome.value;
+            $idade = this.form1.fIdade.value;
+
+            $qtdCaracteres_nome = $nome.length;
+            $qtd_idade = $idade.length;
+
+            if($qtdCaracteres_nome < 1)
+            {
+                alert("Por favor digite seu nome !")
+                //return false
+            }
+
+            if($qtd_idade < 1)
+            {
+                alert("Por favor digite sua idade !")
+                //return false
+            }
+
+            document.write($nome + " tem " + $qtdCaracteres_nome + "caracteres.<br>")
+            document.write($nome + ", idade = " + $idade) ;
+            return false;
+        }
+    </script>
+
+</head>
+<body>
+    <form name="form1" ... onsubmit="return senai()">
+        Nome  : <input type="password" name="fNome" id="fNome"> <br>
+        Idade : <input type="text" name="fIdade" id="fIdade" > <br>
+        Cidade: <input type="text" name="fCidade" size="50" maxlength="50"> <br>
+        Estado: <input type="text" name="fEstado" size="3" maxlength="2"> <br>
+        <br>
+        <input type="submit" value="Gravar" >
+        <input type="reset" value="Limpar"> <!-- ******  -->
+    </form>
+    
+</body>
+</html>

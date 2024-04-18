@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function validarForm()
+        {
+            $usuario = this.form1.fUsuario.value;
+            $senha = this.form1.fSenha.value;
+
+            $tam_usuario = $usuario.length
+            $tam_senha = $senha.length
+
+            if($tam_usuario < 1)
+            {
+                alert("Por favor informe seu usuário !")
+                return false
+            }
+
+            if($tam_senha < 1)
+            {
+                alert("Por favor informe sua senha !")
+                return false
+            }
+
+            if( ($usuario == "senai") && ($senha == "sumare") )
+            {
+                document.write("Usuário validado com sucesso !")
+                document.write("<br><img src='acesso_permitido.png' width='20%'>")
+
+            }
+            else
+            {
+                document.write("Usuário ou senha inválido !")
+                document.write("<br><img src='acesso_negado.jpg' width='20%'>")
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <form name="form1" method="post" action="" onsubmit="return validarForm()">
+        Usuário  : <input type="text" name="fUsuario"> <br>
+        Senha : <input type="password" name="fSenha"> <br>
+        <br>
+        <input type="submit" value="Acessar" >
+        <input type="reset" value="Limpar">
+    </form>
+
+    
+    <br>
+    
+    
+</body>
+</html>
